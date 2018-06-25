@@ -3,16 +3,34 @@ package com.sorting;
 public class BubbleSort {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	//	int num[] = { 4, 5, 7, 2, 3, 9 };
+		System.out.println("Bubble Sort array");
 		int num[] = { 6,8,1,4,5,3,7,2 };
-		//int sortedarray[] = bubblesorting(num);
-	//	int sortedarray[] = selectionSort(num);
-		//int sortedarray[] = bucketSort(num);
-		int sortedarray[] = insertionSort(num);
+		int sortedarray[] = bubblesorting(num);
 		for (int i : sortedarray) {
 			System.out.print(","+i);
 		}
+		System.out.println();
+		
+		int num1[] = { 6,8,1,4,5,3,7,2 };
+		int selectionSort[] = selectionSort(num1);
+		System.out.println("Selection Sort array");
+		for (int i : selectionSort) {
+			System.out.print(","+i);
+		}
+		
+		System.out.println();
+		int num2[] = { 6,8,1,4,5,3,7,2 };
+		int insertionArray[] = insertionSortNew(num2);
+		System.out.println("Insertion Sort Sort array");
+		for (int i : insertionArray) {
+			System.out.print(","+i);
+		}
+
+		
+		
+		
+		
+		
 	}
 
 	// ascending sort
@@ -20,10 +38,10 @@ public class BubbleSort {
 
 		int temp;
 		for (int i = 0; i < num.length - 1; i++) {
-			for (int j = 0; j < num.length - 1; j++) {
+			for (int j = 0; j < num.length - 1 -i; j++) {
 				if (num[j] > num[j + 1]) {
 					temp = num[j];
-					num[j] = num[j + 1];
+					num[j] = num[j + 1]; 
 					num[j + 1] = temp;
 				}
 			}
@@ -36,7 +54,7 @@ public class BubbleSort {
 		int min, temp;
 		for (int i = 0; i < num.length - 1; i++) {
 			min = i;
-			for (int j = i+1; j < num.length - 1; j++) {
+			for (int j = i+1; j < num.length; j++) {
 
 				if (num[min] >num[j]) {
 					min =j;
@@ -66,6 +84,22 @@ public class BubbleSort {
 		}
 		return num;
 		
+	}
+	
+	public static int[] insertionSortNew(int[] num)
+	{
+		for(int i =0;i<num.length  ;i++) {
+			int current= num[i];
+			int j =i-1;
+			while(j>=0 && num[j]>current ) {
+				num[j+1]= num[j];
+				j=j-1;
+			}
+			num[j+1] = current;
+			
+		}
+		
+		return num;
 	}
 	
 	

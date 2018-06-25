@@ -1,5 +1,7 @@
 package com.datastructure.hashtable;
 
+import java.util.HashMap;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -22,6 +24,13 @@ public class Main {
 		hashtable.insert(std3key, std3);
 		hashtable.insert(std4key, std4);
 
+		HashMap map = new HashMap();
+		map.put("hi", "hello");
+		map.put("ih", "hello1");
+		map.put("hi", "hello2");
+		map.forEach((key,value) ->{
+			System.out.println(value);
+		});
 	//	hashtable.deleteStd(std2.getRollno());
 
 		hashtable.showData();

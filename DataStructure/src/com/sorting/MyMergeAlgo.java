@@ -80,12 +80,16 @@ public class MyMergeAlgo {
 					indexR++;
 					indexRes++;
 				}
-			} else if (indexL < left.length) {
+			}
+			//if right is empty populate with left
+			else if (indexL < left.length) {
 				result[indexRes] = left[indexL];
 				indexL++;
 				indexRes++;
 
-			} else if (indexR < right.length) {
+			} 
+			//if left is empty populate with right
+			else if (indexR < right.length) {
 				result[indexRes] = right[indexR];
 				indexR++;
 				indexRes++;

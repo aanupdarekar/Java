@@ -2,8 +2,13 @@ package com.datastructure;
 
 public class BST {
 	
+	
+	//Inner class
 	public class Node {
+		//left child
 		public Node lc;
+		
+		///right child
 		public Node rc;
 		public Person data;
 	}
@@ -23,6 +28,8 @@ public class BST {
 			root = n;
 			return true;
 		}
+		
+		//parent node needed while looping through child
 		Node p = root;
 		Node c = root;
 		while (c != null) {

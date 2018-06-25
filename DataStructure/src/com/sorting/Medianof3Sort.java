@@ -1,4 +1,4 @@
-package com.sorting;
+ package com.sorting;
 
 public class Medianof3Sort {
 	public static long[] theArray = new long[10];
