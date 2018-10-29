@@ -1,3 +1,3 @@
 - [ ] for an empty checkbox
-- [ ] for a checked checkbox
+- [x] for a checked checkbox
 - [ ] Check the box
