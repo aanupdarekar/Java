@@ -1,0 +1,38 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	<!-- Database Connection settings -->
+   		<property name="connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property> <!-- BD Mane -->
+   		<property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+   		<property name="connection.username">postgres</property> <!-- DB User -->
+   		<property name="connection.password">password</property> <!-- DB Password -->
+   		
+   		<!-- SQL dialect -->
+   		<property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property> <!-- DB Dialect -->
+   		
+   		<!-- Drop and recreate sched -->
+   		<property name="hbm2ddl.auto">create</property> <!-- create / create-drop / update -->
+		
+		<property name="show_sql">true</property> <!-- Show SQL in console -->
+		<property name="format_sql">true</property> <!-- Show SQL formatted -->
+		
+		<!-- Enable the second level cache -->
+		<property name="hibernate.cache.use_second_level_cache" >true</property>
+  		 <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+  		 <property name="hibernate.cache.use_query_cache">true</property>
+		
+		<mapping class="org.programmingsearch.hibernate.dto.UserDetails"/>
+		
+		<mapping class="org.programmingsearch.hibernate.dto.Vehicle"/>
+		<mapping class="org.programmingsearch.hibernate.dto.VehicleOneToOne"/>
+		<mapping class="org.programmingsearch.hibernate.dto.UserDetails_one"/>
+		<mapping class="org.programmingsearch.hibernate.dto.UserDetailsOneToOne"/>
+		<mapping class="org.programmingsearch.hibernate.dto.UserDetailsHQL"/>
+		<mapping class="org.programmingsearch.hibernate.dto.UserDetailsNamedQuery"/>
+		<mapping class="org.programmingsearch.hibernate.dto.UserDetailsCaching"/>
+		<mapping class="org.programmingsearch.hibernate.dto.UserDetailsCachingQueryCache"/>
+	</session-factory>
+</hibernate-configuration>

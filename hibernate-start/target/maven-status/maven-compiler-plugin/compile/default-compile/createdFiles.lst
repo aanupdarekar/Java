@@ -1,0 +1,9 @@
+org\programmingsearch\hibernate\dto\Vehicle.class
+org\programmingsearch\hibernate\dto\UserDetailsHQL.class
+org\programmingsearch\hibernate\dto\UserDetails_one.class
+Test.class
+org\programmingsearch\hibernate\dto\UserDetails.class
+org\programmingsearch\hibernate\HibernateTestHQL.class
+org\programmingsearch\hibernate\HibernateTest_one.class
+org\programmingsearch\hibernate\HibernateTest.class
+org\programmingsearch\hibernate\dto\Address.class
